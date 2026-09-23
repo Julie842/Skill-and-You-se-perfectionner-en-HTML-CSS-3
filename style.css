@@ -1,0 +1,248 @@
+/* ==========================================================================
+   CHARTE GRAPHIQUE & RÉGLAGES GÉNÉRAUX
+   ========================================================================== */
+
+/* Variables de couleurs */
+:root {
+    --rouge-1: #aa3322;
+    --rouge-2: #721717;
+    --noir: #000000;
+    --blanc: #ffffff;
+    --gris-1: #cccccc;
+    --gris-2: #aaaaaa;
+    --gris-3: #ededed;
+}
+
+/* Réinitialisation de base & typographie */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 14px;
+    color: var(--noir);
+    background-color: #f5f5f5;
+}
+
+/* Conteneur principal fixe à 960px et centré */
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+    background-color: var(--blanc);
+}
+
+/* ==========================================================================
+   EN-TÊTE, MENU & BANDEAU
+   ========================================================================== */
+
+/* Titre principal */
+header h1 {
+    font-family: 'Lucida Calligraphy', cursive;
+    font-size: 34px;
+    color: var(--rouge-1);
+    text-align: center;
+    padding: 20px 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation principale */
+nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--rouge-1);
+}
+
+nav.main-nav li {
+    margin: 0;
+}
+
+nav.main-nav a {
+    display: block;
+    padding: 8px 16px;
+    background-color: var(--rouge-1);
+    color: var(--gris-1);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-right: 1px dashed var(--gris-1);
+}
+
+nav.main-nav li:first-child a {
+    border-left: 1px dashed var(--gris-1);
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active {
+    background-color: var(--gris-1);
+    color: var(--blanc);
+}
+
+/* Bandeau sous le menu */
+.bandeau {
+    width: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   CONTENU PRINCIPAL & TYPOGRAPHIE
+   ========================================================================== */
+
+/* Marges générales du contenu */
+main {
+    padding: 20px 0 40px 50px; /* Marge gauche de 50px par rapport au bandeau */
+}
+
+/* Specificité pour la page citations */
+main.page-citations {
+    padding-left: 90px; /* Décalage de 90px */
+}
+
+/* Titres et Sous-titres */
+h2 {
+    font-size: 26px;
+    color: var(--noir);
+    text-align: center;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 20px;
+    color: var(--noir);
+    margin: 20px 0 10px 0;
+}
+
+/* Sous-sous-titre ciblé via ancre */
+h3:target {
+    color: var(--rouge-2);
+    text-decoration: underline;
+}
+
+p {
+    font-size: 14px;
+    color: var(--noir);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Liens du texte */
+main a {
+    color: var(--rouge-1);
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+main a:hover {
+    color: var(--gris-2);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   PAGE : COUPS DE CŒUR (SOUS-MENU & BLOCS LIVRES)
+   ========================================================================== */
+
+/* Sous-menu ancré */
+.sub-menu {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sub-menu a {
+    color: var(--rouge-1);
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.sub-menu a:hover {
+    text-decoration: none;
+}
+
+/* Conteneur des 3 blocs livres (80% du contenu principal, centré) */
+.books-container {
+    width: 80%;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    flex: 1;
+    background-color: var(--gris-3);
+    border: 1px solid var(--rouge-1);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.book-card h4 {
+    color: var(--rouge-1);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-card .author-date {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.book-card .genre {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--noir);
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   PAGE : EXTRAITS CHOISIS (BLOCS CITATIONS)
+   ========================================================================== */
+
+.citation-card {
+    width: 450px;
+    background-color: var(--gris-3);
+    border: 1px dotted var(--rouge-1);
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--noir);
+    margin: 0 0 15px 0;
+    margin-left: 90px;
+}
+
+/* ==========================================================================
+   PAGE : PRÉSENTATION (HORAIRES)
+   ========================================================================== */
+
+.horaires-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.horaires-list li {
+    margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   PIED DE PAGE (FOOTER)
+   ========================================================================== */
+
+footer {
+    background-color: var(--gris-2);
+    color: var(--rouge-2);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+footer .address {
+    text-align: right;
+    font-style: italic;
+    font-weight : bold;
+}
